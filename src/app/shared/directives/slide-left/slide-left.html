@@ -1,0 +1,10 @@
+﻿<div class="slide" ng-class="{visible: show}">
+    <div class="slide__overlay" ng-show="show" ng-click="show = false"></div>
+    <div class="slide__container-outer" ng-style="{'max-width' : width }">
+        <div class="slide--title-wrapper">
+            <span class="slide__title">{{ panelTitle }}</span>
+            <button class="slide__dismiss" ng-click="show = false">&times;</button>
+        </div>
+       <div ng-transclude class="slide__container-inner"></div>
+    </div>
+</div>

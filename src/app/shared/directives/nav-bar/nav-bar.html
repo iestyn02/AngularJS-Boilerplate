@@ -1,0 +1,12 @@
+<div class="header">
+  <div class="header__left"></div>
+  <div class="header__right">
+    <div class="user-profile" role="button" ng-click="$root.appConfigs.searchOpen = true;">
+      <div class="user-profile__avatar"
+        ng-style="{'background-image': 'url(' + (profile.picture ? profile.picture : './assets/img/profile.png') + ')'}">
+      </div>
+      <span class="user-profile__nickname" ng-bind="profile.nickname"></span>
+      <i class="pe-7s-angle-down"></i>
+    </div>
+  </div>
+</div>

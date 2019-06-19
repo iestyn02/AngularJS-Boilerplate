@@ -1,0 +1,119 @@
+$spacing-large: 20px;
+
+.slide {
+  & &__overlay {
+    /*position: absolute; changed to fixed - To Investigate*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    // background: $overlay-color;
+    background: rgba(0, 0, 0, 0.09);
+    z-index: 12;
+  }
+
+  & &__container-outer {
+    position: fixed;
+    width: 100%;
+    max-width: 500px;
+    top: 0;
+    right: -7px;
+    height: 100%;
+    overflow: hidden;
+    z-index: 99;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.21);
+    transition: all 0.38s ease;
+    transform: translate3d(100%, 0, 0);
+
+    .slide__container-inner {
+      overflow-y: auto;
+      height: calc(100% - (#{$spacing-large}* 2));
+      padding: 0 $spacing-large $spacing-large;
+      margin-top: -$spacing-large;
+    }
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    color: #3e4956;
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 22px;
+  }
+
+  label {
+    color: #617083;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    cursor: pointer;
+    background: none;
+  }
+
+  &.visible {
+    .slide__container-outer {
+      transform: translate3d(0, 0, 0);
+      right: 0;
+    }
+  }
+
+  & &--title-wrapper {
+    padding: $spacing-large;
+  }
+
+  & &__title {
+    color: #2980b9;
+    font-size: 28px;
+    font-weight: 300;
+  }
+
+  & &__dismiss {
+    transition: all 0.15s linear;
+    position: absolute;
+    right: 29px;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 39px;
+    top: 18px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 200;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.7);
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.21);
+    }
+  }
+}
+
+.pixel-tabs {
+  border-bottom: 1px solid #cfdbe6;
+  margin-top: 30px;
+  // height: 54px;
+  margin-bottom: 20px;
+  clear: both;
+
+  .tab-ele {
+    padding: 17px 20px;
+    display: inline-block;
+    font-weight: 500;
+    color: #617083;
+    transition: color 0.45s;
+    cursor: pointer;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    &.active {
+      color: $primary-btn;
+      border-bottom: 2px solid $primary-btn;
+    }
+  }
+}

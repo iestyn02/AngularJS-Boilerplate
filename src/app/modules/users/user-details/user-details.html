@@ -1,0 +1,62 @@
+<div class="user__details">
+  <div class="user__details__card">
+    <img src="{{ vm.dom.user.picture ? vm.dom.user.picture : './assets/img/profile.png'}}">
+    <h1>{{ vm.dom.user.name }}</h1>
+    <button ng-click="vm.fns.deleteUser(vm.dom.user._id)" ng-if="!vm.dom.isnew" title="Delete User" class="btn btn--danger btn--small">Delete User</button>
+  </div>
+  <div class="pixel-tabs">
+    <span class="tab-ele" ng-class="{ active: vm.dom.tab == 1 }" ng-click="vm.dom.tab = 1">Details</span>
+    <span class="tab-ele" ng-class="{ active: vm.dom.tab == 2 }" ng-click="vm.dom.tab = 2">Raw JSON</span>
+  </div>
+  <div ng-show="vm.dom.tab == 1">
+    <form>
+      <div class="form-group">
+        <input name="name" type="text" required="required" ng-model="vm.dom.user.name" />
+        <label for="name" class="control-label">Name</label><i class="bar"></i>
+      </div>
+      <div class="form-group">
+        <input name="company" type="text" required="required" ng-model="vm.dom.user.company" />
+        <label for="company" class="control-label">Company</label><i class="bar"></i>
+      </div>
+      <div class="form-group">
+        <select name="user_type" ng-model="vm.dom.user.isAdmin">
+          <option ng-value="true">Administrator</option>
+          <option ng-value="false">Developer</option>
+        </select>
+        <label for="user_type" class="control-label">User Type</label><i class="bar"></i>
+      </div>
+      <div class="form-group">
+        <input name="username" type="text" required="required" ng-model="vm.dom.user.username" />
+        <label for="username" class="control-label">Username</label><i class="bar"></i>
+      </div>
+      <div class="form-group">
+        <input name="avatar" type="text" required="required" ng-model="vm.dom.user.picture" />
+        <label for="avatar" class="control-label">Avatar URL</label><i class="bar"></i>
+      </div>
+      <div class="form-radio">
+          <div class="radio">
+            <label>
+              <input type="radio" name="gender" value="male" ng-model="vm.dom.user.gender"/><i class="helper"></i>Male
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="gender" value="female" ng-model="vm.dom.user.gender"/><i class="helper"></i>Female
+            </label>
+          </div>
+        </div>
+      <div class="form-group">
+        <textarea name="about" ng-model="vm.dom.user.about"></textarea>
+        <label for="about" class="control-label">About</label><i class="bar"></i>
+      </div>
+    </form>
+  </div>
+  <div ng-show="vm.dom.tab == 2">
+    <code>
+      <pre>
+          {{ vm.dom.user | json }}
+      </pre>
+    </code>
+  </div>
+  <button ng-click="vm.fns.patchUser(vm.dom.user._id, vm.dom.user)" class="btn btn--accent btn--details__fixed">Save</button>
+</div>

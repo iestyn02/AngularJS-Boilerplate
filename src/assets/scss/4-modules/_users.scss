@@ -1,0 +1,193 @@
+$stats-min-width: 150px;
+
+.user__tbl__header {
+  height: 50px;
+  background: transparent;
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.user__tbl__row {
+  display: flex;
+  height: 100px;
+  border-radius: 8px;
+  &:hover {
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.18);
+  }
+  &__left {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    color: #0c2a49;
+    .user__avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 20px;
+      .user__avatar__img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    .user__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0px 20px;
+      .user__item__name {
+        font-size: 15px;
+      }
+      .user__item__username {
+        color: #bdcccf;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+
+    .user__dev {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+
+      .user__dev__stat {
+        color: #385982;
+        justify-content: center;
+        align-items: center;
+        width: $stats-min-width;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 1px;
+        display: flex;
+        i {
+          color: #b0cad1;
+          margin-right: 7px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .user__contributions {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      .user__contributions__val {
+        background: #f0f6f7;
+        color: #18bcc9;
+        height: 44px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 80px;
+        font-size: 13px;
+        letter-spacing: 0px;
+        font-weight: 500;
+      }
+    }
+
+    .user__crud__controls {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      height: 27px;
+      border-left: 2px solid rgba(176, 202, 209, 0.3);
+      justify-content: center;
+      align-items: center;
+      width: 130px;
+    }
+  }
+}
+
+.user__tbl__header {
+  display: flex;
+  height: 45px;
+  flex-direction: row;
+  &__left {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+  &__right {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    button {
+      padding: 17px 20px;
+      display: inline-block;
+      font-weight: 500;
+      color: #617083;
+      transition: color 0.45s;
+      cursor: pointer;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #b0cad1;
+      background: transparent;
+      border: none;
+    }
+    .user__tbl__header__contributions {
+      width: 200px;
+    }
+    .user__dev {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      .user__dev__stat {
+        justify-content: center;
+        align-items: center;
+        width: $stats-min-width;
+        font-weight: 700;
+      }
+    }
+    .user__crud__controls {
+      width: 130px;
+    }
+  }
+}
+.user__details {
+  margin-top: 30px;
+  .user__details__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+
+    h1 {
+      color: #617083;
+      font-weight: 200;
+      font-size: 21px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<div class="main-out-bg">
+  <main class="main-wrap" ng-class="{ 'main-wrap--hide': appConfigs.searchOpen }">
+    <div class="main-container">
+      <div class="nav">
+        <div class="nav-container">
+          <a href="javascript:;" class="nav-container__logo" ng-click="$root.appConfigs.searchOpen = true;">
+            <img src="./assets/img/logo.png" />
+          </a>
+          <app-menu></app-menu>
+        </div>
+      </div>
+      <div class="main">
+        <navigation-bar></navigation-bar>
+        <ui-view></ui-view>
+      </div>
+    </div>
+  </main>
+  <search-box is-open="appConfigs.searchOpen"></search-box>
+</div>

@@ -1,0 +1,11 @@
+.axier__tbl {
+  // background:red;
+  width: 100%;
+  .axier__tbl__row {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    min-height: 60px;
+    margin: 10px 0px;
+  }
+}

@@ -1,0 +1,26 @@
+::-webkit-scrollbar {
+    width: 10px;
+    height:10px;
+    background-color: transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+  ::-webkit-scrollbar:hover {
+    background-color: rgba(0,0,0,.05);
+  }
+
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+  background: rgba(0,0,0,.2);
+  border-radius: 100px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  min-height: 10px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active,
+::-webkit-scrollbar-thumb:horizontal:active {
+  background: rgba(0,0,0,.3);
+  -webkit-border-radius: 100px;
+}
