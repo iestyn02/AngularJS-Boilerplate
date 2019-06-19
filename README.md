@@ -7,7 +7,7 @@
 <h1 align="center">Angular JS & Auth0 Boilerplate</h1>
 
 <p align="center">
-  <b>A small Angular JS boilerplate project with Auth0 integration</b></br>
+  <b>A small Angular JS boilerplate project with Auth0 integration</b>
 </p>
 
 <p align="center">
