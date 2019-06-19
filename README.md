@@ -8,10 +8,11 @@
 
 <p align="center">
   <b>A small Angular JS boilerplate project with Auth0 integration</b></br>
-  <sub>Made with ❤️ by <a href="https://www.linkedin.com/in/iestyn-d-24765273/">Iestyn Dalli</a></sub>
 </p>
 
-<br />
+<p align="center">
+  <sub>Made with ❤️ by <a href="https://www.linkedin.com/in/iestyn-d-24765273/">Iestyn Dalli</a></sub>
+</p>
 
 ## ❯ Why
 

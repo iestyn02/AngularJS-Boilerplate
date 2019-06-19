@@ -1,0 +1,6 @@
+.home__container {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    height: calc(100% - #{$navbar-height});
+}
