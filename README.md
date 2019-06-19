@@ -77,8 +77,6 @@ below.
 
 * `npm build` or `npm run build` - produces production version of your library under the `lib` folder
 * `npm run dev` - produces development version of your library and runs a watcher
-* `npm run test` - it runs the tests :)
-* `npm run test:watch` - same as above but in a watch mode
 
 ## Build & Serve
 
@@ -88,7 +86,7 @@ below.
 
 ## Live Demo
 
-[Live Demo](https://angular.axier.io/boilerplate)
+[Live Demo](https://angular.axier.io/)
 
 ## License
 
