@@ -2,7 +2,8 @@
   <button class="btn btn--search-close" aria-label="Close search form" ng-click="isOpen = !isOpen">×</button>
   <div class="search__inner search__inner--up">
     <form class="search__form" ng-submit="dom.playVideo(dom.searchModel)">
-      <input id="search__input" ng-model="dom.searchModel" class="search__input" name="search" type="search" placeholder="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+      <input id="search__input" ng-model="dom.searchModel" class="search__input" name="search" type="search"
+        placeholder="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
       <span class="search__info">Paste a url and hit enter to search or ESC to close</span>
     </form>
   </div>
@@ -11,8 +12,8 @@
       <div class="search__suggestion">
         <button class="btn btn--accent" ng-click="vm.fns.logout();">Log Out</button>
         <span class="search__info-pre">Or choose one of these!</span>
-        <span>{{ vm.dom }}</span>
-        <div class="search__suggestion--item" ng-repeat="item in dom.videosList" ng-click="dom.playVideo(item.url)" ng-bind="item.name"></div>
+        <div class="search__suggestion--item" ng-repeat="item in dom.videosList" ng-click="dom.playVideo(item.url)"
+          ng-bind="item.name"></div>
       </div>
     </div>
   </div>

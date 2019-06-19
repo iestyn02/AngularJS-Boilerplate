@@ -31,13 +31,11 @@
 
     service.logOut = function () {
       localStorage.clear();
-      // window.location = 'https://minima.eu.auth0.com/v2/logout?returnTo=http://localhost:8468';
 
       angularAuth0.logout({
-        return_to: window.location.origin
+        return_to: window.location.href
       });
 
-      // + APP_URI_CONFIG.appBaseUrl
     }
 
     return service;

@@ -1,5 +1,8 @@
 /// <binding Clean='clean' />
-var gutil = require('gulp-util');
+require('dotenv').config()
+
+var fs = require('fs');
+var GulpSSH = require('gulp-ssh')
 var requireDir = require('require-dir');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
@@ -16,7 +19,22 @@ global.config = {
 var gulp = require('gulp'),
   $ = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp-add-src', 'del', 'merge-stream', 'require-dir']
-  })
+  });
+
+var gulpSSH = new GulpSSH({
+  ignoreErrors: false,
+  sshConfig: {
+    host: process.env.SFTP_HOST,
+    port: process.env.SFTP_PORT,
+    username: process.env.SFTP_USERNAME,
+    privateKey: fs.readFileSync(process.env.SFTP_SSH_KEY_PATH)
+  }
+});
+
+gulp.task('deploy', function () {
+  return gulp.src(['dist/**', 'dist/assets/**'])
+    .pipe(gulpSSH.dest('/var/www/angular.axier.io/'))
+});
 
 gulp.task('html-inject', function () {
   return gulp.src('./src/index.html').pipe(gulp.dest('./dist'));
@@ -47,7 +65,9 @@ gulp.task('_prompt:build', function () {
           break;
         case "Build & Deploy App":
           global.config.isLocal = false;
-          gulp.start(['app:compile']);
+          runSequence('_clean', ['app:compile', 'app:vendorboot', 'sass:compile', '_compile:assets'], function () {
+            gulp.start('deploy');
+          });
           break;
       }
     }));

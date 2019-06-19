@@ -1,11 +1,11 @@
-(function() {
+(function () {
   'use strict';
 
   angular
     .module('axier')
     .constant('APP_URI_CONFIG', {
       "apiBaseUrl": '',
-      "appBaseUrl": ''
+      "appBaseUrl": window.location.href
     });
 
 })();

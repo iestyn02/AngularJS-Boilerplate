@@ -19,10 +19,6 @@
 
         var vm = this;
 
-        vm.dom = {
-          "test": "test"
-        }
-
         vm.fns = {
           logout: authService.logOut
         }
@@ -66,9 +62,6 @@
 
         vm.init = function () {
           initEvents();
-          // informationService.getVideos().then(function(res) {
-          //     angular.copy(res, $scope.dom.videosList);
-          // });
         }
 
         vm.init();
