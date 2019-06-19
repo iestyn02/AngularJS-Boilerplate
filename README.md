@@ -79,12 +79,6 @@ below.
 * `npm build` or `npm run build` - produces production version of your library under the `lib` folder
 * `npm run dev` - produces development version of your library and runs a watcher
 
-## Build & Serve
-
-* $ cd es6-technical
-* $ npm run build
-* $ library is now bundled, you can import the module like this `const lib = require('../lib/field-aware-technical');`
-
 ## Live Demo
 
 [Live Demo](https://angular.axier.io/)
