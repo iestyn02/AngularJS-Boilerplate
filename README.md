@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://axier.io/">
-    <img width="75" height="75" src="https://i.imgur.com/8MRpU2J.png" alt="axier logo">
+    <img width="200" height="85" src="https://i.imgur.com/Nevc4Gq.png" alt="axier logo">
   </a>
 </p>
 
@@ -12,8 +12,6 @@
 </p>
 
 <br />
-
-<hr />
 
 ## ❯ Why
 
