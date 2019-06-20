@@ -28,6 +28,7 @@
       })
       .state('callback', {
         url: '/callback',
+        templateUrl: 'app/shared/tpls/callback.html',
         controller: function ($state, $timeout, angularAuth0, authService) {
           angularAuth0.parseHash(function (err, authResult) {
             if (authResult && authResult.accessToken && authResult.idToken) {
