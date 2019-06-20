@@ -2,7 +2,7 @@
   "name": "angularjs-boilerplate",
   "author": "Iestyn Dalli",
   "description": "An AngularJS boilerplate to start off development on SPAs.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "scripts": {
     "start": "gulp"
