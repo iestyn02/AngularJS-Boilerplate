@@ -31,7 +31,7 @@
         templateUrl: 'app/shared/tpls/callback.html',
         controller: function ($state, $timeout, angularAuth0, authService) {
           angularAuth0.parseHash(function (err, authResult) {
-            if (authResult && authResult.accessToken && authResult.idToken) {
+            if (authResult && authResult.accessToken) {
               authService.setSession(authResult)
               $state.go('app.base.dock');
             } else if (err) {
