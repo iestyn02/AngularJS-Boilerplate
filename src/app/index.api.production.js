@@ -5,7 +5,7 @@
     .module('axier')
     .constant('APP_URI_CONFIG', {
       "apiBaseUrl": '',
-      "appBaseUrl": window.location.href
+      "appBaseUrl": window.location.origin
     });
 
 })();
