@@ -20,7 +20,7 @@
       responseType: 'token id_token',
       audience: AUTH0_AUDIENCE,
       redirect: false,
-      redirectUri: AUTH0_CALLBACK_URL || APP_URI_CONFIG.appBaseUrl + 'callback',
+      redirectUri: AUTH0_CALLBACK_URL || APP_URI_CONFIG.appBaseUrl + '/callback',
       scope: 'openid profile'
     });
 
