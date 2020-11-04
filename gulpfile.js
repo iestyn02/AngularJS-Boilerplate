@@ -33,7 +33,7 @@ var gulpSSH = new GulpSSH({
 
 gulp.task('deploy', function () {
   return gulp.src(['dist/**', 'dist/assets/**'])
-    .pipe(gulpSSH.dest('/var/www/angular.axier.io/'))
+    .pipe(gulpSSH.dest(process.env.SFTP_DEST_PATH))
 });
 
 gulp.task('html-inject', function () {

@@ -2,8 +2,10 @@
   <div class="pixel-tabs">
     <span class="tab-ele" ng-class="{ active: vm.dom.filters.type == -1 }" ng-click="vm.dom.filters.type = -1">All
       Users</span>
-    <span class="tab-ele" ng-class="{ active: vm.dom.filters.type == 1 }" ng-click="vm.dom.filters.type = 1">Admins</span>
-    <span class="tab-ele" ng-class="{ active: vm.dom.filters.type == 2 }" ng-click="vm.dom.filters.type = 2">Developers</span>
+    <span class="tab-ele" ng-class="{ active: vm.dom.filters.type == 1 }"
+      ng-click="vm.dom.filters.type = 1">Admins</span>
+    <span class="tab-ele" ng-class="{ active: vm.dom.filters.type == 2 }"
+      ng-click="vm.dom.filters.type = 2">Developers</span>
   </div>
 
   <div class="axier__tbl">
@@ -12,27 +14,37 @@
         <input class="search__users" ng-model="vm.dom.filters.search" />
       </div>
       <div class="user__tbl__header__right">
-        <button class="user__tbl__header__contributions" ng-click="vm.dom.sort.type = 'user_contributions'; vm.dom.sort.reverse = !vm.dom.sort.reverse">
-          User Contributions <i ng-show="vm.dom.sort.type == 'user_contributions'" class="fa" ng-class="vm.dom.sort.reverse ? 'fa-caret-down' : 'fa-caret-up'"></i>
+        <button class="user__tbl__header__contributions"
+          ng-click="vm.dom.sort.type = 'user_contributions'; vm.dom.sort.reverse = !vm.dom.sort.reverse">
+          User Contributions <i ng-show="vm.dom.sort.type == 'user_contributions'" class="fa"
+            ng-class="vm.dom.sort.reverse ? 'fa-caret-down' : 'fa-caret-up'"></i>
         </button>
         <div class="user__dev">
-          <button class="user__dev__stat" ng-click="vm.dom.sort.type = 'open_issues'; vm.dom.sort.reverse = !vm.dom.sort.reverse">
-            Open Issues <i ng-show="vm.dom.sort.type == 'open_issues'" class="fa" ng-class="vm.dom.sort.reverse ? 'fa-caret-down' : 'fa-caret-up'"></i>
+          <button class="user__dev__stat"
+            ng-click="vm.dom.sort.type = 'open_issues'; vm.dom.sort.reverse = !vm.dom.sort.reverse">
+            Open Issues <i ng-show="vm.dom.sort.type == 'open_issues'" class="fa"
+              ng-class="vm.dom.sort.reverse ? 'fa-caret-down' : 'fa-caret-up'"></i>
           </button>
-          <button class="user__dev__stat" ng-click="vm.dom.sort.type = 'commits'; vm.dom.sort.reverse = !vm.dom.sort.reverse">
-            Commits <i ng-show="vm.dom.sort.type == 'commits'" class="fa" ng-class="vm.dom.sort.reverse ? 'fa-caret-down' : 'fa-caret-up'"></i>
+          <button class="user__dev__stat"
+            ng-click="vm.dom.sort.type = 'commits'; vm.dom.sort.reverse = !vm.dom.sort.reverse">
+            Commits <i ng-show="vm.dom.sort.type == 'commits'" class="fa"
+              ng-class="vm.dom.sort.reverse ? 'fa-caret-down' : 'fa-caret-up'"></i>
           </button>
-          <button class="user__dev__stat" ng-click="vm.dom.sort.type = 'pull_requests'; vm.dom.sort.reverse = !vm.dom.sort.reverse">
-            Pull Requests <i ng-show="vm.dom.sort.type == 'pull_requests'" class="fa" ng-class="vm.dom.sort.reverse ? 'fa-caret-down' : 'fa-caret-up'"></i>
+          <button class="user__dev__stat"
+            ng-click="vm.dom.sort.type = 'pull_requests'; vm.dom.sort.reverse = !vm.dom.sort.reverse">
+            Pull Requests <i ng-show="vm.dom.sort.type == 'pull_requests'" class="fa"
+              ng-class="vm.dom.sort.reverse ? 'fa-caret-down' : 'fa-caret-up'"></i>
           </button>
         </div>
         <div class="user__crud__controls"></div>
       </div>
     </div>
-    <div class="axier__tbl__row user__tbl__row animate__fade-in" ng-repeat="user in vm.dom.users | filter: vm.fns.filter(vm.dom.filters) | filter: vm.dom.filters.search | orderBy:vm.fns.usersOrderBy:vm.dom.sort.reverse">
+    <div class="axier__tbl__row user__tbl__row animate__fade-in"
+      ng-repeat="user in vm.dom.users | filter: vm.fns.filter(vm.dom.filters) | filter: vm.dom.filters.search | orderBy:vm.fns.usersOrderBy:vm.dom.sort.reverse">
       <div class="user__tbl__row__left">
         <div class="user__avatar">
-          <span class="user__avatar__img" ng-style="{'background-image': 'url(' + (user.picture ? user.picture : './assets/img/profile.png') + ')'}"></span>
+          <span class="user__avatar__img"
+            ng-style="{'background-image': 'url(' + (user.picture ? user.picture : './assets/img/profile.png') + ')'}"></span>
         </div>
         <div class="user__item">
           <div class="user__item__name">
@@ -45,7 +57,8 @@
       </div>
       <div class="user__tbl__row__right">
         <div class="user__contributions">
-          <span class="user__contributions__val" ng-bind="user.open_issues + user.commits + user.pull_requests + ' Contributions'"></span>
+          <span class="user__contributions__val"
+            ng-bind="user.open_issues + user.commits + user.pull_requests + ' Contributions'"></span>
         </div>
         <div class="user__dev">
           <div class="user__dev__stat">
@@ -67,7 +80,8 @@
       </div>
     </div>
   </div>
-  <button class="btn btn--accent btn--fixed" role="link" aria-label="create new user" ui-sref="app.base.users.list.details({'id': -1})">New
+  <button class="btn btn--accent btn--fixed" role="link" aria-label="create new user"
+    ui-sref="app.base.users.list.details({'id': -1})">New
     User</button>
 </div>
 
